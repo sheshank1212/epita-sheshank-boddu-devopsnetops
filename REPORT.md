@@ -58,7 +58,47 @@
 
 
 
-Pending completion.
+\## Part 4 — CLI Packaging and TestPyPI Deployment
+
+
+
+\### Package Build
+
+Built the source distribution and wheel using `uv build`.
+
+
+
+\- Source distribution: `epita\_sheshank\_boddu\_devopsnetops-0.1.0.tar.gz`
+
+\- Wheel: `epita\_sheshank\_boddu\_devopsnetops-0.1.0-py3-none-any.whl`
+
+
+
+\### TestPyPI Publication
+
+Successfully uploaded both distribution files to TestPyPI using Twine.
+
+
+
+Package URL: https://test.pypi.org/project/epita-sheshank-boddu-devopsnetops/0.1.0/
+
+
+
+\### Installation Verification
+
+Created a separate virtual environment named `.venv\_test` and installed version `0.1.0` from TestPyPI.
+
+
+
+\### CLI Verification
+
+Ran `epita-group3-cli.exe` from the isolated environment. The CLI displayed the GitHub profile information, including API status, username, public repository count, and follower count.
+
+
+
+\*\*Result:\*\* Package build, publication, installation, and CLI execution were successful.
+
+
 
 
 
