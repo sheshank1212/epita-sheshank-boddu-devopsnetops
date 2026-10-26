@@ -58,6 +58,56 @@
 
 
 
+\### Dependency Management
+
+
+
+\- Added project dependencies and development tools using `uv`.
+
+\- Used `uv tree` to inspect the dependency tree.
+
+\- Updated `pyproject.toml` to define project metadata, dependencies, and the CLI entry point.
+
+\- Generated and maintained `uv.lock` to record resolved dependency versions for reproducible installations.
+
+\- Added `pytest` for automated testing.
+
+\- Ran `uv run pytest` successfully: \*\*1 test passed\*\*.
+
+\- Built the package using `uv build`, generating both a source distribution (`.tar.gz`) and a wheel (`.whl`).
+
+
+
+\### CLI Installation Verification
+
+
+
+\- Uploaded the package distributions to TestPyPI using Twine.
+
+\- Created a separate virtual environment to verify installation.
+
+\- Installed the published package from TestPyPI.
+
+\- Executed `epita-group3-cli.exe` successfully.
+
+\- Verified that the CLI displayed the GitHub profile information, including username, public repositories, and followers.
+
+\- Confirmed that the GitHub API request returned `LIVE\_SUCCESS`.
+
+
+
+\### Security
+
+
+
+\- Stored the GitHub token in a local `.env` file rather than hardcoding it in the source code.
+
+\- Added `.env` to `.gitignore` to prevent accidental commits of secrets.
+
+\- Kept API tokens out of the project report and submission files.
+
+
+
 \## Part 4 — CLI Packaging and TestPyPI Deployment
 
 
@@ -99,6 +149,32 @@ Ran `epita-group3-cli.exe` from the isolated environment. The CLI displayed the 
 \*\*Result:\*\* Package build, publication, installation, and CLI execution were successful.
 
 
+
+
+
+
+
+\### Part 5 — Debugging Challenge
+
+
+
+\*\*Tool used:\*\* Python interactive debugger (`pdb`).
+
+
+
+\*\*Diagnosis:\*\* The API record stores `volume` and `weight` as strings. The debugger confirmed that `record\["volume"]` and `record\["weight"]` have type `str`.
+
+
+
+\*\*Inspection:\*\* I used breakpoints and the `where`, `up`, `down`, `p`, and `type()` commands to inspect the call stack and variable types. In `compute\_weighted\_metric()`, the values were `450.0` and `3.0`, both of type `float`.
+
+
+
+\*\*Fix:\*\* Convert numeric fields to floating-point numbers when parsing the API records, before performing arithmetic.
+
+
+
+\*\*Verification:\*\* Running `uv run python scripts/debug\_challenge.py` completed successfully and printed the aggregate telemetry result.
 
 
 
