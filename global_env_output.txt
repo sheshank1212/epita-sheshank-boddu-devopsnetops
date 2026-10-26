@@ -1,0 +1,28 @@
+
+=== OS Executable Path ($PATH) ===
+  - C:\Program Files (x86)\Common Files\Oracle\Java\java8path
+  - C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+  - C:\Users\sri98\AppData\Roaming\Python\Python312\Scripts
+  - C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\bin
+
+=== Active Python Binary (sys.executable) ===
+  C:\Program Files\Python312\python.exe
+
+=== Python Version ===
+  3.12.4
+
+=== Virtual Env Prefix (sys.prefix) ===
+  C:\Program Files\Python312
+
+=== Base Prefix (sys.base_prefix) ===
+  C:\Program Files\Python312
+
+=== Is in Virtual Environment? ===
+  False
+
+=== Search Paths for Imports (sys.path) ===
+  - C:\Users\sri98\epita_sheshank.boddu_DevOpsNetOps\scripts
+  - C:\Program Files\Python312\python312.zip
+  - C:\Program Files\Python312\DLLs
+  - C:\Program Files\Python312\Lib
+  - C:\Program Files\Python312
