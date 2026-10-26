@@ -1,7 +1,8 @@
+
 [project]
 name = "epita-sheshank-boddu-devopsnetops"
 version = "0.1.0"
-description = "Add your description here"
+description = "EPITA Group 3 DevOps and NetOps GitHub REST API CLI"
 readme = "README.md"
 authors = [
     { name = "Sheshank Boddu", email = "sri9848d@gmail.com" }
@@ -12,6 +13,9 @@ dependencies = [
     "requests>=2.34.2",
     "rich>=15.0.0",
 ]
+
+[project.scripts]
+epita-group3-cli = "epita_sheshank_boddu_devopsnetops.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
